@@ -1,4 +1,5 @@
 import trips from "../data/db";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -8,10 +9,12 @@ const HomePage = () => {
         <div className="row">
           <div className="col-12">
             <ul>
-              <li>{trips[0].name}</li>
-              <li>{trips[0].city}</li>
-              <li>{trips[0].initialDate}</li>
-              <li>{trips[0].endDate}</li>
+              <Link to="/trips">
+                <li>{trips[0].name}</li>
+                <li>{trips[0].city}</li>
+                <li>{trips[0].initialDate}</li>
+                <li>{trips[0].endDate}</li>
+              </Link>
             </ul>
           </div>
         </div>
