@@ -10,6 +10,9 @@ const HomePage = () => {
           <div className="col-12">
             <ul>
               <li>{trips[0].name}</li>
+              <li>{trips[0].city}</li>
+              <li>{trips[0].initialDate}</li>
+              <li>{trips[0].endDate}</li>
             </ul>
           </div>
         </div>
