@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="row">
           <div className="col-12">
             <ul>
-              <Link to="">
+              <Link to={`/trips/${trips[0].id}`}>
                 <li>{trips[0].name}</li>
               </Link>
               <li>{trips[0].city}</li>
