@@ -6,44 +6,45 @@ const ParticipantCard = ({ participants }) => {
 	return (
 		<div>
 			{participants.map((participant) => (
-				<div key={participant.participantId}>
-					<p>
-						{participant.name} {participant.surname}
-					</p>
-					<p>{participant.phone}</p>
-					<p>{participant.email}</p>
-					<p>{participant.fiscalCode}</p>
-					<div
-						className="accordion"
-						id={`accordion-${participant.participantId}`}
-					>
-						<div className="accordion-item">
-							<h2 className="accordion-header">
-								<button
-									className="accordion-button"
-									type="button"
-									onClick={() =>
-										setActiveId(
-											activeId === participant.participantId
-												? null
-												: participant.participantId
-										)
-									}
-								>
-									{participant.name} {participant.surname}
-								</button>
-							</h2>
-							<div
-								className={`accordion-collapse collapse ${
-									activeId === participant.participantId ? "show" : ""
-								}`}
+				<div
+					key={participant.participantId}
+					className="accordion my-3"
+					id={`accordion-${participant.participantId}`}
+				>
+					<div className="accordion-item">
+						<h2 className="accordion-header">
+							<button
+								className="accordion-button"
+								type="button"
+								onClick={() =>
+									setActiveId(
+										activeId === participant.participantId
+											? null
+											: participant.participantId
+									)
+								}
 							>
-								<div className="accordion-body">
-									<strong>
-										<p>{participant.phone}</p>
-									</strong>
-									<p>{participant.email}</p>
-									<p>{participant.fiscalCode}</p>
+								{participant.name} {participant.surname}
+							</button>
+						</h2>
+						<div
+							className={`accordion-collapse collapse ${
+								activeId === participant.participantId ? "show" : ""
+							}`}
+						>
+							<div className="accordion-body">
+								<div className="container-fluid">
+									<div className="row">
+										<div className="col-12 col-md-4 text-center">
+											<p>{participant.phone}</p>
+										</div>
+										<div className="col-12 col-md-4 text-center">
+											<p>{participant.email}</p>
+										</div>
+										<div className="col-12 col-md-4 text-center">
+											<p>{participant.fiscalCode}</p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
