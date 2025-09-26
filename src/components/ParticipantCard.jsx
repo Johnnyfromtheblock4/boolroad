@@ -1,4 +1,5 @@
 import trips from "../data/db";
+import { Link } from "react-router-dom";
 
 const ParticipantCard = ({ currentTrip }) => {
   return (
