@@ -34,7 +34,7 @@ const DetailTrip = () => {
         <div className="col-12">
           <h1>{currentTrip && currentTrip.name}</h1>
           <h2>Partecipanti</h2>
-          <ParticipantCard currentTrip={currentTrip} />
+          <ParticipantCard currentTrip={currentTrip} id={id} />
         </div>
       </div>
     </div>
