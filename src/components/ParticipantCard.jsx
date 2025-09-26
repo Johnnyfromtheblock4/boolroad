@@ -1,4 +1,8 @@
+import { useState } from "react";
+import { normalizeModuleId } from "vite/module-runner";
+
 const ParticipantCard = ({ participants }) => {
+	const [activeId, setActiveId] = useState(null);
 	return (
 		<div>
 			{participants.map((participant) => (
@@ -9,26 +13,32 @@ const ParticipantCard = ({ participants }) => {
 					<p>{participant.phone}</p>
 					<p>{participant.email}</p>
 					<p>{participant.fiscalCode}</p>
-					<div class="accordion">
-						<div class="accordion-item">
-							<h2 class="accordion-header">
+					<div
+						className="accordion"
+						id={`accordion-${participant.participantId}`}
+					>
+						<div className="accordion-item">
+							<h2 className="accordion-header">
 								<button
-									class="accordion-button"
+									className="accordion-button"
 									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#collapseOne"
-									aria-expanded="true"
-									aria-controls="collapseOne"
+									onClick={() =>
+										setActiveId(
+											activeId === participant.participantId
+												? null
+												: participant.participantId
+										)
+									}
 								>
 									{participant.name} {participant.surname}
 								</button>
 							</h2>
 							<div
-								id="collapseOne"
-								class="accordion-collapse collapse show"
-								data-bs-parent="#accordionExample"
+								className={`accordion-collapse collapse ${
+									activeId === participant.participantId ? "show" : ""
+								}`}
 							>
-								<div class="accordion-body">
+								<div className="accordion-body">
 									<strong>
 										<p>{participant.phone}</p>
 									</strong>
