@@ -1,11 +1,28 @@
 import trips from "../data/db";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const DetailTrip = () => {
+  // importo params
+  const { id } = useParams();
+
+  // definisco variabile stato
+  const [participants, setParticipants] = useState({});
+
+  // funzione che recupera i partecupanti in base all'id
+  const fetchParticipants = () => {
+    setParticipants(trips[id].participants);
+  };
+
+  // useEffect
+  useEffect(fetchParticipants, []);
+  console.log(participants);
+
   return (
     <div>
       <div className="container">
         <div className="row">
+          {/* Searchbar */}
           <div className="col-12">
             <form className="d-flex" role="search">
               <input
@@ -21,6 +38,7 @@ const DetailTrip = () => {
           </div>
         </div>
       </div>
+      {/* Lista Partecipanti */}
       <div className="col-12">
         <h1>{trips[0].name}</h1>
         <h2>Partecipanti</h2>
