@@ -1,4 +1,5 @@
 import trips from "../data/db";
+import { useState, useEffect } from "react";
 
 const DetailTrip = () => {
   return (
@@ -34,8 +35,8 @@ const DetailTrip = () => {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                {trips[0].participants[0].name}{" "}
-                {trips[0].participants[0].surname}{" "}
+                {trips[0].participants[0].name}
+                {trips[0].participants[0].surname}
               </button>
             </h2>
             <div
@@ -60,7 +61,7 @@ const DetailTrip = () => {
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                {trips[0].participants[1].name}{" "}
+                {trips[0].participants[1].name}
                 {trips[0].participants[1].surname}
               </button>
             </h2>
