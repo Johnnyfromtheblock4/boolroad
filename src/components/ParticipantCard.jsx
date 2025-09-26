@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { normalizeModuleId } from "vite/module-runner";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faMobilePhone,
+	faEnvelope,
+	faHashtag,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ParticipantCard = ({ participants }) => {
 	const [activeId, setActiveId] = useState(null);
@@ -36,13 +41,25 @@ const ParticipantCard = ({ participants }) => {
 								<div className="container-fluid">
 									<div className="row">
 										<div className="col-12 col-md-4 text-center">
-											<p>{participant.phone}</p>
+											<p>
+												<FontAwesomeIcon icon={faMobilePhone} />
+												&nbsp;
+												{participant.phone}
+											</p>
 										</div>
 										<div className="col-12 col-md-4 text-center">
-											<p>{participant.email}</p>
+											<p>
+												<FontAwesomeIcon icon={faEnvelope} />
+												&nbsp;
+												{participant.email}
+											</p>
 										</div>
 										<div className="col-12 col-md-4 text-center">
-											<p>{participant.fiscalCode}</p>
+											<p>
+												<FontAwesomeIcon icon={faHashtag} />
+												&nbsp;
+												{participant.fiscalCode}
+											</p>
 										</div>
 									</div>
 								</div>
