@@ -1,5 +1,4 @@
 import trips from "../data/db";
-console.log(trips);
 
 const HomePage = () => {
   return (
