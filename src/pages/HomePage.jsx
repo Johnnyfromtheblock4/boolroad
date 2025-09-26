@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "../styles/HomePage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsDownToLine } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
   return (
     <div className="container mt-5">
-      <h1 className="text-center mb-4">Lista Viaggi</h1>
+      <h3 className="text-center mb-2">Next Up</h3>
+      <h3 className="text-center mb-4"><FontAwesomeIcon icon={faArrowsDownToLine} /></h3>
       <div className="row justify-content-center">
         {trips.map((trip) => (
           <div key={trip.id} className="col-md-6 col-lg-4 mb-4">

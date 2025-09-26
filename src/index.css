@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+/* Temporaneo, per visualizzare in pagina detail quei dati, il CSS della Home sovrascrive */
+h1, h2, p{
+  color: white;
+}
+
+.accordion-body p{
+  color: #23272C;
+}
+
+.navbar-brand{
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.first-part-title{
+  color: #B87757;
+}

@@ -5,6 +5,7 @@ const trips = [
     city: "Como",
     initialDate: "2025-11-14",
     endDate: "2025-11-17",
+    image: "gita-al-lago.jpg",
     participants: [
       {
         name: "Amleto",
@@ -32,6 +33,7 @@ const trips = [
     city: "Trento",
     initialDate: "2025-12-02",
     endDate: "2025-12-04",
+    image: "weekend-in-montagna.jpg",
     participants: [
       {
         name: "Lucia",
@@ -59,6 +61,7 @@ const trips = [
     city: "Alba",
     initialDate: "2025-10-10",
     endDate: "2025-10-12",
+    image: "tour-enogastronomico.jpg",
     participants: [
       {
         name: "Chiara",
@@ -86,6 +89,7 @@ const trips = [
     city: "Firenze",
     initialDate: "2025-09-20",
     endDate: "2025-09-22",
+    image: "visita-culturale.jpg",
     participants: [
       {
         name: "Elena",
@@ -113,6 +117,7 @@ const trips = [
     city: "Val di Fassa",
     initialDate: "2025-08-05",
     endDate: "2025-08-07",
+    image: "escursione-naturalistica.jpg",
     participants: [
       {
         name: "Giulia",
@@ -140,6 +145,7 @@ const trips = [
     city: "Venezia",
     initialDate: "2025-07-15",
     endDate: "2025-07-16",
+    image: "giro-in-barca.jpg",
     participants: [
       {
         name: "Sara",
@@ -167,6 +173,7 @@ const trips = [
     city: "Catania",
     initialDate: "2025-06-10",
     endDate: "2025-06-12",
+    image: "trekking-sulletna.jpg",
     participants: [
       {
         name: "Alessia",
@@ -194,6 +201,7 @@ const trips = [
     city: "Milano",
     initialDate: "2025-05-01",
     endDate: "2025-05-03",
+    image: "festival-musicale.jpg",
     participants: [
       {
         name: "Irene",
@@ -221,6 +229,7 @@ const trips = [
     city: "Rimini",
     initialDate: "2025-04-20",
     endDate: "2025-04-20",
+    image: "giornata-in-spiaggia.jpg",
     participants: [
       {
         name: "Valentina",
@@ -248,6 +257,7 @@ const trips = [
     city: "Torino",
     initialDate: "2025-03-15",
     endDate: "2025-03-16",
+    image: "passeggiata-fotografica.jpg",
     participants: [
       {
         name: "Beatrice",
