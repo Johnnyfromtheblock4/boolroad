@@ -11,6 +11,3 @@ tramite nome e cognome.
 - BONUS: Aggiungere la possibilità di inserire un nuovo viaggio ed associarvi eventuali nuovi contatti.
 Nota: non è necessario produrre un backend funzionante per il prototipo; può andare benissimo un array di dati
 fittizi inserito direttamente a codice.
-
-
-Test commit
