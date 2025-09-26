@@ -7,16 +7,16 @@ const DetailTrip = () => {
   const { id } = useParams();
 
   // definisco variabile stato
-  const [participants, setParticipants] = useState({});
+  const [currentTrip, setCurrentTrip] = useState({});
 
   // funzione che recupera i partecupanti in base all'id
-  const fetchParticipants = () => {
-    setParticipants(trips[id].participants);
+  const fetchCurrentTrip = () => {
+    setCurrentTrip(trips[id]);
   };
 
   // useEffect
-  useEffect(fetchParticipants, []);
-  console.log(participants);
+  useEffect(fetchCurrentTrip, []);
+  console.log(currentTrip);
 
   return (
     <div>
