@@ -51,6 +51,9 @@ const DetailTrip = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
+            {/* <button class="btn btn-primary" type="submit">
+              Search
+            </button> */}
           </form>
         </div>
       </div>
