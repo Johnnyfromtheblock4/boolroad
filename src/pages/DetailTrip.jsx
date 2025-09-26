@@ -11,6 +11,9 @@ const DetailTrip = () => {
     setCurrentTrip(trips.find((trip) => trip.id == id));
   }, [id]);
 
+  // searchbar
+
+
   return (
     <div>
       <div className="container-fluid">
