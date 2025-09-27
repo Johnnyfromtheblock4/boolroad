@@ -8,9 +8,70 @@ import { faCarSide } from "@fortawesome/free-solid-svg-icons";
 const HomePage = () => {
   return (
     <div className="container mt-5">
-      <h3 className="text-center mb-4"><FontAwesomeIcon icon={faCarSide} /> Next Up</h3>
-      <h3 className="text-center mb-3"> <FontAwesomeIcon icon={faArrowsDownToLine} /></h3>
+      <h3 className="text-center mb-4">
+        <FontAwesomeIcon icon={faCarSide} /> Next Up
+      </h3>
+      <h3 className="text-center mb-3">
+        {" "}
+        <FontAwesomeIcon icon={faArrowsDownToLine} />
+      </h3>
       <div className="row justify-content-center">
+        <button>+</button>
+        {/* Form */}
+        <div className="col-md-6 col-lg-4 mb-4">
+          <div className="card h-100 text-center slate-card">
+            <div className="card-title mt-3">
+              <h5>Inserisci un Nuovo Viaggo</h5>
+            </div>
+            <div className="card-body">
+              <form onSubmit="">
+                <div className="mb-3">
+                  <label>Nome viaggio</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control mb-2"
+                    value=""
+                    onChange=""
+                    placeholder="Inserisci Descrizione Viaggio"
+                  />
+                  <label>Destinazione</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control mb-2"
+                    value=""
+                    onChange=""
+                    placeholder="Inserisci Città"
+                  />
+                  <label>Data Inizio</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control mb-2"
+                    value=""
+                    onChange=""
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <label>Data Fine</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control mb-2"
+                    value=""
+                    onChange=""
+                    placeholder="yyyy-mm-dd"
+                  />
+                  <label for="formFile" class="form-label">
+                    Immagine
+                  </label>
+                  <input class="form-control mb-2" type="file" id="formFile"></input>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         {trips.map((trip) => (
           <div key={trip.id} className="col-md-6 col-lg-4 mb-4">
             <div className="card h-100 text-center slate-card">
