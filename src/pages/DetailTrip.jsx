@@ -38,7 +38,7 @@ const DetailTrip = () => {
     <div className="container-fluid">
       <div className="row">
         {/* Search */}
-        <div className="col-12">
+        <div className="col-12 my-3">
           <form
             className="d-flex"
             role="search"
