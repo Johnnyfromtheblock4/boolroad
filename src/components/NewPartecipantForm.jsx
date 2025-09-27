@@ -59,7 +59,7 @@ const NewPartecipantForm = () => {
                       className="form-control mb-2"
                       value=""
                       onChange=""
-                      placeholder="Inserisci E-mail"
+                      placeholder="Inserisci Email"
                     />
                     <label>Codice Fiscale</label>
                     <input
