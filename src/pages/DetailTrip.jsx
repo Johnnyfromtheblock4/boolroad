@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import ParticipantCard from "../components/ParticipantCard";
 import NewPartecipantForm from "../components/NewPartecipantForm";
 
-
 const DetailTrip = () => {
   const { id } = useParams();
   const [currentTrip, setCurrentTrip] = useState(null);
@@ -53,9 +52,6 @@ const DetailTrip = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            {/* <button class="btn btn-primary" type="submit">
-              Search
-            </button> */}
           </form>
         </div>
       </div>
@@ -64,7 +60,8 @@ const DetailTrip = () => {
       <div className="col-12">
         <h1>{currentTrip.name}</h1>
         <h2>Partecipanti</h2>
-        <NewPartecipantForm />
+        {/* Mostra il form solo se non c'è ricerca in corso */}
+        {search.trim() === "" && <NewPartecipantForm />}
         <ParticipantCard participants={filteredParticipants} />
       </div>
     </div>
