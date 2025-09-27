@@ -2,6 +2,8 @@ import trips from "../data/db";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ParticipantCard from "../components/ParticipantCard";
+import NewPartecipantForm from "../components/NewPartecipantForm";
+
 
 const DetailTrip = () => {
   const { id } = useParams();
@@ -62,6 +64,7 @@ const DetailTrip = () => {
       <div className="col-12">
         <h1>{currentTrip.name}</h1>
         <h2>Partecipanti</h2>
+        <NewPartecipantForm />
         <ParticipantCard participants={filteredParticipants} />
       </div>
     </div>
