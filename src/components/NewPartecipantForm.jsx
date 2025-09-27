@@ -70,6 +70,9 @@ const NewPartecipantForm = () => {
                       onChange=""
                       placeholder="Inserisci Codice Fiscale"
                     />
+                    <button type="submit" class="btn btn-primary">
+                      Salva
+                    </button>
                   </div>
                 </form>
               </div>
