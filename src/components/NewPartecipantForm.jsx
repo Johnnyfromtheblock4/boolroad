@@ -16,8 +16,9 @@ const NewPartecipantForm = () => {
 							}`}
 							type="button"
 							onClick={() => setActiveForm(!activeForm)}
-						><FontAwesomeIcon icon={faUserPlus} />
-							Aggiungi Partecipante
+						>
+							<FontAwesomeIcon icon={faUserPlus} />
+							&nbsp;&nbsp;Aggiungi Partecipante
 						</button>
 					</h2>
 					<div
