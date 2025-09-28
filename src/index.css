@@ -1,31 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: #23272c;
+	font-family: "Montserrat", sans-serif;
+	background: #23272c;
 }
 
 /* Temporaneo, per visualizzare in pagina detail quei dati, il CSS della Home sovrascrive */
-h1, h2, p{
-  color: white;
+h1,
+h2,
+p {
+	color: white;
 }
 
-.accordion-body p{
-  color: #23272C;
+.accordion-body p {
+	color: #23272c;
 }
 
-.navbar-brand{
-  font-size: 2.1rem;
-  font-weight: 600;
+.navbar-brand {
+	font-size: 2.1rem;
+	font-weight: 600;
 }
 
-.first-part-title{
-  color: #B87757;
+.first-part-title {
+	color: #b87757;
+}
+
+/* accordions */
+
+.new-form .accordion-button:not(.collapsed) {
+	background-color: #cbffb6;
+	color: black;
 }
