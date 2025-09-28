@@ -10,11 +10,11 @@ import NewTripForm from "../components/NewTripForm";
 
 const HomePage = () => {
   return (
-    <div className="container mt-5">
-      <h3 className="text-center mb-4">
+    <div className="container mt-3">
+      <h3 className="text-center mb-3">
         <FontAwesomeIcon icon={faCarSide} /> Next Up
       </h3>
-      <h3 className="text-center mb-3">
+      <h3 className="text-center mb-0">
         <FontAwesomeIcon icon={faArrowsDownToLine} />
       </h3>
       <div className="row justify-content-center">

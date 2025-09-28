@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
 const NewPartecipantForm = () => {
 	const [activeForm, setActiveForm] = useState(null);
@@ -14,7 +16,7 @@ const NewPartecipantForm = () => {
 							}`}
 							type="button"
 							onClick={() => setActiveForm(!activeForm)}
-						>
+						><FontAwesomeIcon icon={faUserPlus} />
 							Aggiungi Partecipante
 						</button>
 					</h2>
