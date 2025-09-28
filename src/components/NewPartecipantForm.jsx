@@ -5,7 +5,7 @@ const NewPartecipantForm = () => {
 	return (
 		<div>
 			{/* Form */}
-			<div className="accordion new-form my-3">
+			<div className="accordion new-form-accordion my-3">
 				<div className="accordion-item">
 					<h2 className="accordion-header">
 						<button

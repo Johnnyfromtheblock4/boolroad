@@ -29,7 +29,7 @@ p {
 
 /* accordions */
 
-.new-form .accordion-button {
+.new-form-accordion .accordion-button {
 	background-color: #cbffb6;
 	color: black;
 }
