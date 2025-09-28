@@ -29,16 +29,16 @@ const HomePage = () => {
                   className="slate-img-photo"
                 />
               </div>
-              <div className="card-body">
+              <div className="card-body py-0 m-0">
                 <h5 className="card-title">
-                  <span className="fw-bold fs-6">
+                  <span className="fw-semibold fs-6 ">
                     {trip.name}
                   </span>
                 </h5>
-                <p className="card-text fs-6">
+                <p className="card-text fs-6 text-end">
                   {trip.city} <FontAwesomeIcon icon={faMapLocationDot} />
                 </p>
-                <p className="card-text fw-semibold fs-6">
+                <p className="card-text fw-semibold fs-6 text-end">
                   {trip.initialDate} <FontAwesomeIcon icon={faArrowRight} /> {trip.endDate}
                 </p>
               </div>
