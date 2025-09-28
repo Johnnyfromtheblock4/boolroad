@@ -27,11 +27,14 @@ p {
 	font-weight: 600;
 }
 
-
-
 /* accordions */
 
-.new-form .accordion-button:not(.collapsed) {
+.new-form .accordion-button {
 	background-color: #cbffb6;
+	color: black;
+}
+
+.participants-accordion .accordion-button {
+	background-color: #dffbff;
 	color: black;
 }

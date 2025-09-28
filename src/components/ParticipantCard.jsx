@@ -13,13 +13,15 @@ const ParticipantCard = ({ participants }) => {
 			{participants.map((participant) => (
 				<div
 					key={participant.participantId}
-					className="accordion my-3"
+					className="accordion participants-accordion my-3"
 					id={`accordion-${participant.participantId}`}
 				>
 					<div className="accordion-item">
 						<h2 className="accordion-header">
 							<button
-								className="accordion-button"
+								className={`accordion-button ${
+									activeId === participant.participantId ? "collapsed" : ""
+								}`}
 								type="button"
 								onClick={() =>
 									setActiveId(
