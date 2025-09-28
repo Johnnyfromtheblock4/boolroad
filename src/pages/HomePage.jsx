@@ -20,7 +20,7 @@ const HomePage = () => {
         <NewTripForm />
         {trips.map((trip) => (
           <div key={trip.id} className="col-md-6 col-lg-3 mb-4">
-            <div className="card h-100 text-center slate-card">
+            <Link to={`/trips/${trip.id}`} className="text-decoration-none card h-100 text-center slate-card">
               <div className="card-img slate-img">
                 <img
                   src={`/images/${trip.image}`}
@@ -30,12 +30,9 @@ const HomePage = () => {
               </div>
               <div className="card-body">
                 <h5 className="card-title">
-                  <Link
-                    to={`/trips/${trip.id}`}
-                    className="text-decoration-none"
-                  >
+                  <span className="fw-bold">
                     {trip.name}
-                  </Link>
+                  </span>
                 </h5>
                 <p className="card-text">
                   {trip.city} <FontAwesomeIcon icon={faMapLocationDot} />
@@ -44,7 +41,7 @@ const HomePage = () => {
                   {trip.initialDate} - {trip.endDate}
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
