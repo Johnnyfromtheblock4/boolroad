@@ -6,8 +6,8 @@ const Header = () => {
     <header>
       <nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div className="container-fluid justify-content-start">
-          <img className="boolroad-logo" src="/boolroad.png" alt="BoolRoad" />
           <Link to="/" className="navbar-brand">
+          <img className="boolroad-logo" src="/boolroad.png" alt="BoolRoad" />
             <span className="first-part-title">.bool</span>Road
           </Link>
         </div>
