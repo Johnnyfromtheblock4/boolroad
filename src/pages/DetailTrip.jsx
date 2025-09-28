@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ParticipantCard from "../components/ParticipantCard";
 import NewPartecipantForm from "../components/NewPartecipantForm";
+import "../styles/DetailTrip.css";
 
 const DetailTrip = () => {
 	const { id } = useParams();
@@ -58,8 +59,8 @@ const DetailTrip = () => {
 
 			{/* Participant */}
 			<div className="col-12">
-				<h1>{currentTrip.name}</h1>
-				<h2>Partecipanti</h2>
+				<h1 className="my-3">{currentTrip.name}</h1>
+				<h3>Partecipanti</h3>
 				{/* Mostra il form solo se non c'è ricerca in corso */}
 				{search.trim() === "" && <NewPartecipantForm />}
 				<ParticipantCard participants={filteredParticipants} />
