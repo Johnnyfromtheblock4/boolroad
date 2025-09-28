@@ -20,7 +20,7 @@ const HomePage = () => {
       <div className="row justify-content-center">
         <NewTripForm />
         {trips.map((trip) => (
-          <div key={trip.id} className="col-md-6 col-lg-3 mb-4">
+          <div key={trip.id} className="col-md-6 col-lg-3 mb-4 card-container">
             <Link to={`/trips/${trip.id}`} className="text-decoration-none card h-100 slate-card">
               <div className="card-img slate-img">
                 <img

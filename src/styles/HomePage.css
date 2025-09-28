@@ -8,7 +8,7 @@ body {
 
 .slate-card {
   background: #fff;
-  border: 1px solid #e5e7eb;
+  border: 3px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(44, 62, 80, 0.09);
   border-radius: 0.9rem;
   overflow: hidden;

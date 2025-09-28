@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const NewTripForm = () => {
 	const [activeForm, setActiveForm] = useState(null);
@@ -14,8 +17,8 @@ const NewTripForm = () => {
 							}`}
 							type="button"
 							onClick={() => setActiveForm(!activeForm)}
-						>
-							Aggiungi Viaggio
+						><FontAwesomeIcon icon={faPlus} size="2xs" /><FontAwesomeIcon icon={faLocationDot} />
+							 Aggiungi Viaggio
 						</button>
 					</h2>
 					<div
