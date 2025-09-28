@@ -7,6 +7,7 @@ import "../styles/DetailTrip.css";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
+import { faArrowsTurnRight } from "@fortawesome/free-solid-svg-icons";
 
 const DetailTrip = () => {
   const { id } = useParams();
@@ -62,7 +63,7 @@ const DetailTrip = () => {
 
       {/* Participant */}
       <div className="col-12">
-        <h1 className="my-3"><FontAwesomeIcon icon={faImage} />{currentTrip.name}</h1>
+        <h2 className="my-3"><FontAwesomeIcon icon={faArrowsTurnRight} />  {currentTrip.name}  </h2>
         <h3>
           <FontAwesomeIcon icon={faUsers} /> Partecipanti
         </h3>

@@ -23,6 +23,10 @@ body {
   transform: translateY(-3px);
 }
 
+.slate-card:hover .card-title .fw-semibold {
+  color: #faa21f;
+}
+
 .slate-img {
   height: 140px;
   background: #ececec;
@@ -67,5 +71,5 @@ h3 {
 }
 
 .card-text.fw-semibold.fs-6{
-  color: #faa21f;
+  color: #F7712D;
 }
