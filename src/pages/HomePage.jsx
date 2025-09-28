@@ -19,7 +19,7 @@ const HomePage = () => {
       <div className="row justify-content-center">
         <NewTripForm />
         {trips.map((trip) => (
-          <div key={trip.id} className="col-md-6 col-lg-4 mb-4">
+          <div key={trip.id} className="col-md-6 col-lg-3 mb-4">
             <div className="card h-100 text-center slate-card">
               <div className="card-img slate-img">
                 <img
