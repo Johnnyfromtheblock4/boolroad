@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faArrowsDownToLine } from "@fortawesome/free-solid-svg-icons";
 import { faCarSide } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import NewTripForm from "../components/NewTripForm";
 
 const HomePage = () => {
@@ -20,7 +21,7 @@ const HomePage = () => {
         <NewTripForm />
         {trips.map((trip) => (
           <div key={trip.id} className="col-md-6 col-lg-3 mb-4">
-            <Link to={`/trips/${trip.id}`} className="text-decoration-none card h-100 text-center slate-card">
+            <Link to={`/trips/${trip.id}`} className="text-decoration-none card h-100 slate-card">
               <div className="card-img slate-img">
                 <img
                   src={`/images/${trip.image}`}
@@ -30,15 +31,15 @@ const HomePage = () => {
               </div>
               <div className="card-body">
                 <h5 className="card-title">
-                  <span className="fw-bold">
+                  <span className="fw-bold fs-6">
                     {trip.name}
                   </span>
                 </h5>
-                <p className="card-text">
+                <p className="card-text fs-6">
                   {trip.city} <FontAwesomeIcon icon={faMapLocationDot} />
                 </p>
-                <p className="card-text">
-                  {trip.initialDate} - {trip.endDate}
+                <p className="card-text fw-semibold fs-6">
+                  {trip.initialDate} <FontAwesomeIcon icon={faArrowRight} /> {trip.endDate}
                 </p>
               </div>
             </Link>

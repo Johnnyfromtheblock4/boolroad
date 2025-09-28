@@ -65,3 +65,7 @@ h3 {
   border-radius: 0;    
   display: block;
 }
+
+.card-text.fw-semibold.fs-6{
+  color: #c55e1e;
+}
