@@ -5,67 +5,67 @@ import ParticipantCard from "../components/ParticipantCard";
 import NewPartecipantForm from "../components/NewPartecipantForm";
 
 const DetailTrip = () => {
-  const { id } = useParams();
-  const [currentTrip, setCurrentTrip] = useState(null);
-  const [filteredParticipants, setFilteredParticipants] = useState([]);
-  const [search, setSearch] = useState("");
+	const { id } = useParams();
+	const [currentTrip, setCurrentTrip] = useState(null);
+	const [filteredParticipants, setFilteredParticipants] = useState([]);
+	const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    // trova il trip
-    const trip = trips.find((trip) => trip.id == id);
-    setCurrentTrip(trip);
+	useEffect(() => {
+		// trova il trip
+		const trip = trips.find((trip) => trip.id == id);
+		setCurrentTrip(trip);
 
-    // inizializza i partecipanti
-    if (trip) {
-      setFilteredParticipants(trip.participants);
-    }
-  }, [id]);
+		// inizializza i partecipanti
+		if (trip) {
+			setFilteredParticipants(trip.participants);
+		}
+	}, [id]);
 
-  useEffect(() => {
-    if (currentTrip) {
-      const tempParticipants = currentTrip.participants.filter((p) =>
-        `${p.name} ${p.surname}`.toLowerCase().includes(search.toLowerCase())
-      );
-      setFilteredParticipants(tempParticipants);
-    }
-  }, [search, currentTrip]);
+	useEffect(() => {
+		if (currentTrip) {
+			const tempParticipants = currentTrip.participants.filter((p) =>
+				`${p.name} ${p.surname}`.toLowerCase().includes(search.toLowerCase())
+			);
+			setFilteredParticipants(tempParticipants);
+		}
+	}, [search, currentTrip]);
 
-  if (!currentTrip) {
-    return <p>Loading...</p>;
-  }
+	if (!currentTrip) {
+		return <p>Loading...</p>;
+	}
 
-  return (
-    <div className="container-fluid">
-      <div className="row">
-        {/* Search */}
-        <div className="col-12 my-3">
-          <form
-            className="d-flex"
-            role="search"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Cerca"
-              aria-label="Cerca"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </form>
-        </div>
-      </div>
+	return (
+		<div className="container">
+			<div className="row">
+				{/* Search */}
+				<div className="col-12 my-3">
+					<form
+						className="d-flex"
+						role="search"
+						onSubmit={(e) => e.preventDefault()}
+					>
+						<input
+							className="form-control me-2"
+							type="search"
+							placeholder="Cerca"
+							aria-label="Cerca"
+							value={search}
+							onChange={(e) => setSearch(e.target.value)}
+						/>
+					</form>
+				</div>
+			</div>
 
-      {/* Participant */}
-      <div className="col-12">
-        <h1>{currentTrip.name}</h1>
-        <h2>Partecipanti</h2>
-        {/* Mostra il form solo se non c'è ricerca in corso */}
-        {search.trim() === "" && <NewPartecipantForm />}
-        <ParticipantCard participants={filteredParticipants} />
-      </div>
-    </div>
-  );
+			{/* Participant */}
+			<div className="col-12">
+				<h1>{currentTrip.name}</h1>
+				<h2>Partecipanti</h2>
+				{/* Mostra il form solo se non c'è ricerca in corso */}
+				{search.trim() === "" && <NewPartecipantForm />}
+				<ParticipantCard participants={filteredParticipants} />
+			</div>
+		</div>
+	);
 };
 
 export default DetailTrip;
