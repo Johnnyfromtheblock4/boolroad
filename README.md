@@ -1,4 +1,4 @@
-BOOLROAD
+BOOROAD
 ===
 
 Il prototipo della nostra rubrica contatti
